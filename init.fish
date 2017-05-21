@@ -45,7 +45,7 @@ if test -d $RIME_HOME
     if not test -e $RIME_CUSTOM_FILE
         echo > $RIME_CUSTOM_FILE "\
 patch:
-  show_notifications_when: never
+  show_notifications_when: appropriate
   style:
    horizontal: true
    inline_preedit: true
