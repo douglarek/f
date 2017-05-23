@@ -36,34 +36,3 @@ end
 if test -d $HOME/.cargo/bin
     set PATH $PATH $HOME/.cargo/bin
 end
-
-# squirrel settings
-set RIME_HOME $HOME/Library/Rime
-set RIME_CUSTOM_FILE $RIME_HOME/squirrel.custom.yaml
-
-if test -d $RIME_HOME
-    if not test -e $RIME_CUSTOM_FILE
-        echo > $RIME_CUSTOM_FILE "\
-patch:
-  show_notifications_when: appropriate
-  style:
-   horizontal: true
-   inline_preedit: true
-   corner_radius: 6
-   border_height: 0
-   border_width: 12
-   line_spacing: 5
-   spacing: 10
-   font_point: 15
-   label_font_point: 12
-
-  ascii_composer/good_old_caps_lock: true
-  ascii_composer/switch_key:
-   Caps_Lock: noop
-   Shift_L: commit_code
-   Shift_R: noop
-   Control_L: noop
-   Control_R: noop"
-   end
-end
-
