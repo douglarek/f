@@ -29,6 +29,7 @@ end
 
 # ocaml opam settings
 if which opam >/dev/null ^&1
+    eval (opam config env)
     set -gx OCAMLPARAM "_,bin-annot=1"
 end
 
