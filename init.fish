@@ -31,6 +31,7 @@ end
 if which opam >/dev/null ^&1
     opam config env | source
     set -gx OCAMLPARAM "_,bin-annot=1"
+    set -e MANPATH
 end
 
 # rust cargo settings
