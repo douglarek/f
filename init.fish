@@ -42,3 +42,9 @@ end
 if test -d $HOME/.cargo/bin
     set PATH $PATH $HOME/.cargo/bin
 end
+
+# neovim
+if which nvim >/dev/null ^&1
+    alias vim=nvim
+    alias vi=nvim
+end
