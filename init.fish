@@ -25,9 +25,9 @@ if which go >/dev/null ^&1
   set -gx GOPATH $HOME/.go
   mkdir -p $GOPATH/bin
   set PATH $PATH /usr/local/opt/go/libexec/bin $GOPATH/bin
-  set GO_LATEST_RC go1.9rc2
+  set GO_LATEST go
   if which $GO_LATEST_RC >/dev/null ^&1
-    alias go=$GO_LATEST_RC
+    alias go=$GO_LATEST
   end
 end
 
