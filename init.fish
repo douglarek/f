@@ -33,18 +33,24 @@ end
 
 # ocaml opam settings
 if which opam >/dev/null ^&1
-    opam config env | source
-    set -gx OCAMLPARAM "_,bin-annot=1"
-    set -e MANPATH
+  opam config env | source
+  set -gx OCAMLPARAM "_,bin-annot=1"
+  set -e MANPATH
 end
 
 # rust cargo settings
 if test -d $HOME/.cargo/bin
-    set PATH $PATH $HOME/.cargo/bin
+  set PATH $PATH $HOME/.cargo/bin
 end
 
 # neovim
 if which nvim >/dev/null ^&1
-    alias vim=nvim
-    alias vi=nvim
+  alias vim=nvim
+  alias vi=nvim
 end
+
+# fish done
+if not which terminal-notifier >/dev/null ^&1
+  echo "WARN: `Please install terminal-notifier by brew install terminal-notifier`"
+end
+set -U __done_min_cmd_duration 10000 # 10s
