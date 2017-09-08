@@ -54,3 +54,10 @@ if not which terminal-notifier >/dev/null ^&1
   echo "WARN: `Please install terminal-notifier by brew install terminal-notifier`"
 end
 set -U __done_min_cmd_duration 10000 # 10s
+
+# nim
+if which nimble >/dev/null ^&1
+  set NIMBLE_BIN $HOME/.nimble/bin
+  mkdir -p $NIMBLE_BIN
+  set PATH $PATH $NIMBLE_BIN
+end
