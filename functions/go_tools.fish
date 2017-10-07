@@ -12,8 +12,6 @@ function go_tools -d "install or update go tools"
   for i in "cmd/gorename" "cmd/goimports" "cmd/guru"
     go get -u -x golang.org/x/tools/$i
   end
-  for i in "simple/cmd/gosimple" "unused/cmd/unused"
-    go get -u -x honnef.co/go/$i
-  end
+  go get -u -x honnef.co/go/tools/...
 end
 
