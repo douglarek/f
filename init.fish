@@ -14,7 +14,7 @@ function check_brew_installtion --description "check homebrew if installed"
 end
 
 if which brew >/dev/null ^&1
-    set -gx HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+    set -gx HOMEBREW_BOTTLE_DOMAIN https://mirrors.ustc.edu.cn/homebrew-bottles
     set -gx HOMEBREW_NO_ANALYTICS 1
     set -gx HOMEBREW_AUTO_UPDATE_SECS 86400
 end
