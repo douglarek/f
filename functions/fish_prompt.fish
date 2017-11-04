@@ -1,6 +1,6 @@
 # name: L
 
-if which git >/dev/null ^&1
+if type -q git
   git config --global push.default simple
   git config --global merge.log true
   git config --global merge.defaultToUpstream true
