@@ -62,3 +62,12 @@ if type -q nimble
   set PATH $PATH $NIMBLE_BIN
 end
 
+# jshell
+if type -q zile
+  set -gx JSHELLEDITOR zile
+else if type -q vim
+  set -gx JSHELLEDITOR vim
+else if type -q nano
+  set -gx JSHELLEDITOR nano
+else
+end
