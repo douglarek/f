@@ -25,10 +25,6 @@ if type -q go
   set -gx GOPATH $HOME/.go
   mkdir -p $GOPATH/bin
   set PATH $PATH /usr/local/opt/go/libexec/bin $GOPATH/bin
-  set GO_LATEST go
-  if type -q $GO_LATEST_RC
-    alias go=$GO_LATEST
-  end
 end
 
 # ocaml opam settings
