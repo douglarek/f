@@ -24,7 +24,7 @@ if type -q go
   mkdir -p $HOME/.go
   set -gx GOPATH $HOME/.go
   mkdir -p $GOPATH/bin
-  set PATH $PATH (go env | grep --color=no GOTOOLDIR | cut -d '"' -f 2) $GOPATH/bin
+  set PATH $PATH (go env GOTOOLDIR) $GOPATH/bin
 end
 
 # ocaml opam settings
