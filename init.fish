@@ -61,9 +61,12 @@ end
 # jshell
 if type -q zile
   set -gx JSHELLEDITOR zile
+  set -gx EDITOR zile
 else if type -q vim
   set -gx JSHELLEDITOR vim
+  set -gx EDITOR vim
 else if type -q nano
   set -gx JSHELLEDITOR nano
+  set -gx EDITOR nano
 else
 end
