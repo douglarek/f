@@ -12,7 +12,7 @@ function go_tools -d "install or update go tools"
   go get -x -v github.com/nishanths/license
   go get -x -v github.com/ramya-rao-a/go-outline
   go get -x -v github.com/acroca/go-symbols
-  go get -x -v github.com/nsf/gocode
+  go get -x -v github.com/mdempsky/gocode
   go get -x -v github.com/rogpeppe/godef
   go get -x -v golang.org/x/tools/cmd/godoc
   go get -x -v github.com/zmb3/gogetdoc
