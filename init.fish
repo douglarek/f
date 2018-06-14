@@ -70,3 +70,8 @@ else if type -q nano
   set -gx EDITOR nano
 else
 end
+
+# direnv
+if type -q direnv
+  eval (direnv hook fish)
+end
