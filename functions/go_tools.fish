@@ -25,5 +25,6 @@ function go_tools -d "install or update go tools"
   go get -x -v golang.org/x/tools/cmd/guru
   go get -x -v github.com/josharian/impl
   go get -x -v github.com/haya14busa/goplay/cmd/goplay
+  go get -x -v github.com/davidrjenni/reftools/cmd/fillstruct
 end
 
