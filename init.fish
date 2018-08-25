@@ -23,7 +23,6 @@ end
 if type -q go
   mkdir -p $HOME/.go
   set -gx GOPATH $HOME/.go
-  set -gx GO111MODULE on
   mkdir -p $GOPATH/bin
   set PATH $PATH (go env GOROOT)/bin $GOPATH/bin
 end

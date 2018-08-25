@@ -7,7 +7,6 @@
 
 function go_tools -d "install or update go tools"
   go get -x -v golang.org/x/tools/cmd/goimports
-  go get -x -v github.com/golang/dep/cmd/dep
   go get -x -v honnef.co/go/tools/...
   go get -x -v github.com/nishanths/license
   go get -x -v github.com/ramya-rao-a/go-outline
@@ -27,5 +26,6 @@ function go_tools -d "install or update go tools"
   go get -x -v github.com/haya14busa/goplay/cmd/goplay
   go get -x -v github.com/davidrjenni/reftools/cmd/fillstruct
   go get -x -v github.com/sourcegraph/go-langserver
+  go get -x -v github.com/alecthomas/gometalinter
 end
 
