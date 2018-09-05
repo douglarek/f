@@ -1,3 +1,6 @@
+# close fish greetings
+set fish_greeting
+
 # global encoding
 set -gx LANG en_US.UTF-8
 
