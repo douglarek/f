@@ -1,14 +1,3 @@
-if type -q git
-  git config --global push.default simple
-  git config --global merge.log true
-  git config --global merge.defaultToUpstream true
-  git config --global rebase.autosquash true
-  git config --global branch.autosetupmerge always
-  git config --global rerere.enabled true
-  git config --global url."git@github.com:".insteadOf "https://github.com/"
-  alias gl='git log --graph --decorate --oneline --color --all'
-end
-
 function fish_prompt --description 'Write out the prompt'
 	set -l last_status $status
 
