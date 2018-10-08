@@ -1,10 +1,8 @@
-fisherman/docker-completion
 fisherman/pyenv
 fisherman/z
 fisherman/imgcat
 fisherman/gitignore
 fisherman/tio
-fisherman/rvm
 fisherman/done
 fisherman/fzf
 fisherman/getopts
