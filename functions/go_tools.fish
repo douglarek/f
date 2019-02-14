@@ -38,7 +38,7 @@ function go_tools -d "install or update go tools"
     "github.com/rogpeppe/godef"                      \
     "golang.org/x/tools/cmd/godoc"                   \
     "github.com/zmb3/gogetdoc"                       \
-    "github.com/golang/lint/golint"                  \
+    "golang.org/x/lint/golint"                  \
     "github.com/fatih/gomodifytags"                  \
     "github.com/uudashr/gopkgs/cmd/gopkgs"           \
     "golang.org/x/tools/cmd/gorename"                \
