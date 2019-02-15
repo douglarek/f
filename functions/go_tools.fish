@@ -6,6 +6,7 @@
 #
 
 function go_tools -d "install or update go tools"
+  cd $HOME
   set -l flags "-x"
   getopts $argv | while read -l 1 2
     switch "$1"
@@ -59,8 +60,13 @@ function go_tools -d "install or update go tools"
   end
 
   # go modules
-  export GO111MODULE=on
-  go get -x github.com/saibing/bingo
-  set -e GO111MODULE
+  env GO111MODULE=on go get -x github.com/saibing/bingo
+
+  # gocode-gomod
+  go get -x -d github.com/stamblerre/gocode
+  go build -o gocode-gomod github.com/stamblerre/gocode
+  mv gocode-gomod $GOPATH/bin/
+
+  cd -
 end
 
