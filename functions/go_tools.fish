@@ -52,9 +52,15 @@ function go_tools -d "install or update go tools"
     "github.com/alecthomas/gometalinter"             \
     "github.com/derekparker/delve/cmd/dlv"           \
     "github.com/golangci/golangci-lint/cmd/golangci-lint" \
+    "github.com/cjbassi/gotop" \
 
   for p in $pkgs
     go get $flags $p
   end
+
+  # go modules
+  export GO111MODULE=on
+  go get -x github.com/saibing/bingo
+  set -e GO111MODULE
 end
 
