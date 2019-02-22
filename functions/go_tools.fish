@@ -6,7 +6,6 @@
 #
 
 function go_tools -d "install or update go tools"
-  cd $HOME
   set -l flags "-x"
   getopts $argv | while read -l 1 2
     switch "$1"
@@ -53,20 +52,14 @@ function go_tools -d "install or update go tools"
     "github.com/alecthomas/gometalinter"             \
     "github.com/derekparker/delve/cmd/dlv"           \
     "github.com/golangci/golangci-lint/cmd/golangci-lint" \
-    "github.com/cjbassi/gotop" \
 
   for p in $pkgs
     go get $flags $p
   end
 
-  # go modules
-  env GO111MODULE=on go get -x github.com/saibing/bingo
-
   # gocode-gomod
   go get -x -d github.com/stamblerre/gocode
   go build -o gocode-gomod github.com/stamblerre/gocode
   mv gocode-gomod $GOPATH/bin/
-
-  cd -
 end
 
