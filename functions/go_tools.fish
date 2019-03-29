@@ -38,7 +38,7 @@ function go_tools -d "install or update go tools"
     "github.com/rogpeppe/godef"                      \
     "golang.org/x/tools/cmd/godoc"                   \
     "github.com/zmb3/gogetdoc"                       \
-    "golang.org/x/lint/golint"                  \
+    "golang.org/x/lint/golint"                       \
     "github.com/fatih/gomodifytags"                  \
     "github.com/uudashr/gopkgs/cmd/gopkgs"           \
     "golang.org/x/tools/cmd/gorename"                \
@@ -52,14 +52,11 @@ function go_tools -d "install or update go tools"
     "github.com/alecthomas/gometalinter"             \
     "github.com/derekparker/delve/cmd/dlv"           \
     "github.com/golangci/golangci-lint/cmd/golangci-lint" \
+    "github.com/saibing/bingo"                       \
+    "golang.org/x/tools/cmd/gopls"                   \
 
   for p in $pkgs
     go get $flags $p
   end
 
-  # gocode-gomod
-  go get -x -d github.com/stamblerre/gocode
-  go build -o gocode-gomod github.com/stamblerre/gocode
-  mv gocode-gomod $GOPATH/bin/
 end
-
