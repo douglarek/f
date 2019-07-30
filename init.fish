@@ -28,7 +28,7 @@ if type -q go
   set -gx GOPATH $HOME/.go
   mkdir -p $GOPATH/bin
   set PATH $PATH (go env GOROOT)/bin $GOPATH/bin
-  set -gx GOPROXY https://goproxy.cn,direct
+  set -gx GOPROXY https://goproxy.cn
 end
 
 # ocaml opam settings
