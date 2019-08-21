@@ -28,7 +28,6 @@ if type -q go
   set -gx GOPATH $HOME/.go
   mkdir -p $GOPATH/bin
   set PATH $PATH (go env GOROOT)/bin $GOPATH/bin
-  set -gx GO111MODULE on
   set -gx GOPROXY https://goproxy.cn
 end
 
