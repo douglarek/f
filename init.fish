@@ -27,7 +27,7 @@ if type -q go
   mkdir -p $HOME/.go
   set -gx GOPATH $HOME/.go
   mkdir -p $GOPATH/bin
-  set PATH (go env GOROOT)/bin $GOPATH/bin $PATH
+  set PATH $GOPATH/bin (go env GOROOT)/bin $PATH
   set -gx GOSUMDB sum.golang.google.cn
 end
 
