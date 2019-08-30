@@ -28,6 +28,7 @@ if type -q go
   set -gx GOPATH $HOME/.go
   mkdir -p $GOPATH/bin
   set PATH $GOPATH/bin (go env GOROOT)/bin $PATH
+  set -gx GOPROXY https://goproxy.cn,direct
   set -gx GOSUMDB sum.golang.google.cn
 end
 
