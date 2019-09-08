@@ -48,11 +48,8 @@ function go_tools -d "install or update go tools"
     "github.com/josharian/impl"                      \
     "github.com/haya14busa/goplay/cmd/goplay"        \
     "github.com/davidrjenni/reftools/cmd/fillstruct" \
-    "github.com/sourcegraph/go-langserver"           \
-    "github.com/alecthomas/gometalinter"             \
     "github.com/derekparker/delve/cmd/dlv"           \
     "github.com/golangci/golangci-lint/cmd/golangci-lint" \
-    "github.com/saibing/bingo"                       \
     "golang.org/x/tools/cmd/gopls"                   \
 
   for p in $pkgs
