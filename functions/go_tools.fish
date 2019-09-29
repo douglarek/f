@@ -6,7 +6,6 @@
 #
 
 function go_tools -d "install or update go tools"
-  set -l flags "-x"
   getopts $argv | while read -l 1 2
     switch "$1"
       case _
@@ -34,7 +33,6 @@ function go_tools -d "install or update go tools"
     "github.com/nishanths/license"                   \
     "github.com/ramya-rao-a/go-outline"              \
     "github.com/acroca/go-symbols"                   \
-    "github.com/mdempsky/gocode"                     \
     "github.com/rogpeppe/godef"                      \
     "golang.org/x/tools/cmd/godoc"                   \
     "github.com/zmb3/gogetdoc"                       \
@@ -42,18 +40,17 @@ function go_tools -d "install or update go tools"
     "github.com/fatih/gomodifytags"                  \
     "github.com/uudashr/gopkgs/cmd/gopkgs"           \
     "golang.org/x/tools/cmd/gorename"                \
-    "sourcegraph.com/sqs/goreturns"                  \
     "github.com/cweill/gotests/..."                  \
     "golang.org/x/tools/cmd/guru"                    \
     "github.com/josharian/impl"                      \
     "github.com/haya14busa/goplay/cmd/goplay"        \
     "github.com/davidrjenni/reftools/cmd/fillstruct" \
-    "github.com/derekparker/delve/cmd/dlv"           \
+    "github.com/go-delve/delve/cmd/dlv"              \
     "github.com/golangci/golangci-lint/cmd/golangci-lint" \
     "golang.org/x/tools/cmd/gopls"                   \
 
   for p in $pkgs
-    go get $flags $p
+    env GO111MODULE=on go get $flags $p
   end
 
 end
