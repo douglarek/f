@@ -47,7 +47,7 @@ function go_tools -d "install or update go tools"
     "github.com/davidrjenni/reftools/cmd/fillstruct" \
     "github.com/go-delve/delve/cmd/dlv"              \
     "github.com/golangci/golangci-lint/cmd/golangci-lint" \
-    "golang.org/x/tools/cmd/gopls"                   \
+    "golang.org/x/tools/gopls"                   \
 
   for p in $pkgs
     env GO111MODULE=on go get $flags $p
