@@ -45,10 +45,10 @@ if test -d $HOME/.cargo/bin
 end
 
 # neovim
-if type -q nvim
-  alias vim=nvim
-  alias vi=nvim
-end
+# if type -q nvim
+  # alias vim=nvim
+  # alias vi=nvim
+# end
 
 # fish done
 if not type -q terminal-notifier
@@ -64,10 +64,10 @@ if type -q nimble
 end
 
 # jshell
-if type -q zile
-  set -gx JSHELLEDITOR zile
-  set -gx EDITOR zile
-else if type -q vim
+if type -q vim
+  # set -gx JSHELLEDITOR zile
+  # set -gx EDITOR zile
+# else if type -q vim
   set -gx JSHELLEDITOR vim
   set -gx EDITOR vim
 else if type -q nano
