@@ -38,7 +38,7 @@ function go_tools -d "install or update go tools"
     "github.com/zmb3/gogetdoc"                       \
     "golang.org/x/lint/golint"                       \
     "github.com/fatih/gomodifytags"                  \
-    "github.com/uudashr/gopkgs/cmd/gopkgs"           \
+    "github.com/uudashr/gopkgs/v2/cmd/gopkgs"        \
     "golang.org/x/tools/cmd/gorename"                \
     "github.com/cweill/gotests/..."                  \
     "golang.org/x/tools/cmd/guru"                    \
@@ -50,7 +50,7 @@ function go_tools -d "install or update go tools"
     "golang.org/x/tools/gopls"                   \
 
   for p in $pkgs
-    env GO111MODULE=on go get $flags $p
+    env GO111MODULE=on go get -x $flags $p
   end
 
 end
