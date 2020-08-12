@@ -30,6 +30,7 @@ if type -q go
   set PATH $GOPATH/bin (go env GOROOT)/bin $PATH
   set -gx GOPROXY https://goproxy.cn,direct
   set -gx GOSUMDB sum.golang.google.cn
+  set -gx GO111MODULE on
 end
 
 # ocaml opam settings
