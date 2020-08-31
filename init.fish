@@ -29,7 +29,7 @@ if type -q go
   mkdir -p $GOPATH/bin
   set PATH $GOPATH/bin (go env GOROOT)/bin $PATH
   set -gx GOPROXY https://goproxy.cn,direct
-  set -gx GOSUMDB sum.golang.google.cn
+  # set -gx GOSUMDB sum.golang.google.cn
   set -gx GO111MODULE on
 end
 
