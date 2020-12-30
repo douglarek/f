@@ -10,6 +10,7 @@ function go_switch --argument-names 'verzion' # since version in fish shell is a
         go{$verzion} download; or return 1
     end
 
+    go{$verzion} download &> /dev/null; or return 1 # maybe go binary not downloaded, so try it
     set go_bin (command -v "go$verzion")
     ln -sf $go_bin ~/bin/go; or return 1
     echo "Switched to Go $verzion"
