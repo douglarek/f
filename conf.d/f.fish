@@ -82,8 +82,10 @@ if type -q direnv
   eval (direnv hook fish)
 end
 
-if type -q fisher
-  fisher install jorgebucaran/hydro 
+function _foobar_install --on-event f_install
+  fisher install jorgebucaran/hydro
   set -g hydro_color_prompt green
   set -g hydro_color_git magenta
+
+  fisher install PatrickF1/fzf.fish gazorby/fish-abbreviation-tips jorgebucaran/autopair.fish jethrokuan/z daenney/pyenv
 end
