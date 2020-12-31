@@ -34,5 +34,6 @@ function git_config -d "set better git defaults"
     git config --global color.diff.old        "red bold"
     git config --global color.diff.new        "green bold"
     git config --global color.diff.whitespace "red reverse"
+    git config --global diff-so-fancy.rulerWidth 47
   end
 end
