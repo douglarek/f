@@ -81,3 +81,9 @@ end
 if type -q direnv
   eval (direnv hook fish)
 end
+
+if type -q fisher
+  fisher install jorgebucaran/hydro 
+  set -g hydro_color_prompt green
+  set -g hydro_color_git magenta
+end
