@@ -83,9 +83,9 @@ if type -q direnv
 end
 
 function _foobar_install --on-event f_install
+  fisher install PatrickF1/fzf.fish gazorby/fish-abbreviation-tips jorgebucaran/autopair.fish jethrokuan/z daenney/pyenv
+
   fisher install jorgebucaran/hydro
   set -g hydro_color_prompt green
   set -g hydro_color_git magenta
-
-  fisher install PatrickF1/fzf.fish gazorby/fish-abbreviation-tips jorgebucaran/autopair.fish jethrokuan/z daenney/pyenv
 end
