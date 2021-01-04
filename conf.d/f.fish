@@ -82,7 +82,6 @@ if type -q direnv
   eval (direnv hook fish)
 end
 
-function _foobar_install --on-event f_install
-  set -g hydro_color_prompt green
-  set -g hydro_color_git magenta
-end
+# hydro
+set -g hydro_color_prompt green
+set -g hydro_color_git magenta
