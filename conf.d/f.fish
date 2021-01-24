@@ -51,11 +51,13 @@ end
   # alias vi=nvim
 # end
 
-# fish done
-if not type -q terminal-notifier
-  echo "WARN: `Please install terminal-notifier by brew install terminal-notifier`"
+# macOS only
+if [ (uname) = "Darwin" ]
+  if not type -q terminal-notifier
+    echo "WARN: `Please install terminal-notifier by brew install terminal-notifier`"
+  end
+  set -U __done_min_cmd_duration 10000 # 10s
 end
-set -U __done_min_cmd_duration 10000 # 10s
 
 # nim
 if type -q nimble
